@@ -37,10 +37,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elanzel/publish_package.git"
+    "url": "https://github.com/elanzel/publish-package.git"
   },
   "bugs": {
-    "url": "https://github.com/elanzel/publish_package/issues"
+    "url": "https://github.com/elanzel/publish-package/issues"
   },
-  "homepage": "https://github.com/elanzel/publish_package"
+  "homepage": "https://github.com/elanzel/publish-package"
 }
