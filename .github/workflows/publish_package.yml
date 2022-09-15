@@ -22,8 +22,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://github.com/elanzel/publish_package
-      - run: npm install
-      - run: npm run build
       - run: npm publish
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
