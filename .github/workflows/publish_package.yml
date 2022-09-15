@@ -3,18 +3,18 @@ on:
   release:
     types: [created]
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
-      - run: npm install
-      - run: npm run build
+  # build:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: actions/setup-node@v2
+  #       with:
+  #         node-version: 16
+  #     - run: npm install
+  #     - run: npm run build
       
   publish:
-    needs: build
+    # needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -24,13 +24,14 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm install
-      - run: npm run build
-      - run: |
-          echo @elanzel:https://npm.pkg.github.com/ > build/.npmrc
-          echo '//npm.pkg.github.com/:_authToken=${MY_GITHUB_TOKEN}' >> build/.npmrc    
+          registry-url: https://npm.pkg.github.com/
+      # - run: npm install
+      # - run: npm run build
+      # - run: |
+      #     echo @elanzel:registry=https://npm.pkg.github.com/ > build/.npmrc
+      #     echo '//npm.pkg.github.com/:_authToken=${{ secrets.MY_GITHUB_TOKEN }}' >> build/.npmrc    
       - run: npm publish
-        working-directory: ./build
+        # working-directory: ./build
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           

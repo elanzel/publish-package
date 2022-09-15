@@ -1,5 +1,5 @@
 {
-  "name": "@elanzel/publish_package",
+  "name": "@elanzel/publish-package",
   "version": "0.0.1",
   "description": "Example project for TypeScript packages",
   "main": "index.js",
@@ -37,7 +37,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elanzel/publish_package.git"
+    "url": "https://github.com/elanzel/publish_package.git"
   },
   "bugs": {
     "url": "https://github.com/elanzel/publish_package/issues"
