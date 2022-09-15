@@ -23,6 +23,6 @@ jobs:
           node-version: 16
       - run: npm publish
         env:
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
           
           
