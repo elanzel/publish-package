@@ -10,8 +10,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      - run: npm ci
-      - run: npm test
+      - run: npm install
+      - run: npm run build
       
   publish:
     needs: build
@@ -22,7 +22,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://github.com/elanzel/publish_package
-      - run: npm ci
+      - run: npm install
+      - run: npm run build
       - run: npm publish
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
