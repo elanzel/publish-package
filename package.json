@@ -31,7 +31,7 @@
     "npm": ">=7.5.0"
   },
   "publishConfig": {
-    "registry": "https://github.com/elanzel/publish_package.git"
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "ea",
   "license": "ISC",
